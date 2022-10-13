@@ -76,8 +76,8 @@
   .burger {
     display: inline-block;
     position: absolute;
-    top: 5px;
-    right: 0;
+    top: 37px;
+    right: 20px;
     content: url("menu-burger.png");
     display: block;
     width: 24px;
@@ -88,63 +88,10 @@
     display: none;
   }
   .cross {
-    display: inline-block;
-    position: relative;
-    top: 15px;
-    right: 0;
-    content: url("cross.png");
-    display: block;
-    width: 24px;
-    height: 24px;
-    -webkit-appearance: none;
-  }
-
-  .cross:checked .burger {
-    display: inline-block;
-  }
-
-  .menu {
-    overflow: hidden;
-    background-color: gray;
-    padding: 0 0 0 0;
-    width: 0;
-
-    transition-property: width;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
-  }
-  .header__body ul {
-    padding: 0 150px 20px 20px;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px 15px;
-  }
-  .burger:checked ~ .menu {
-  }
-}
-
-@media (max-width: 500px) {
-  .burger {
-    display: inline-block;
+    display: none;
     position: absolute;
-    top: 5px;
-    right: 0;
-    content: url("menu-burger.png");
-    display: block;
-    width: 24px;
-    height: 24px;
-  }
-  .burger:checked {
-    display: none;
-  }
-
-  .cross {
-    display: inline-block;
-    position: relative;
-    top: 15px;
-    right: 0;
+    top: 37px;
+    right: 20px;
     content: url("cross.png");
     display: block;
     width: 24px;
@@ -162,6 +109,19 @@
     right: 0;
     overflow: hidden;
     background-color: gray;
+    padding: 0 0 0 0px;
+    width: 0;
+    transition-property: width;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+  }
+
+  /*
+ border-width: 0px;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    background-color: gray;
 
     padding: 0 0 0 10px;
     width: 0;
@@ -169,6 +129,13 @@
     transition-property: width;
     transition-duration: 500ms;
     transition-timing-function: linear;
+*/
+
+  .menu ul {
+    margin-left: 20px;
+  }
+  .menu .logo {
+    margin-left: 37px;
   }
   .header__body ul {
     padding: 0 150px 20px 20px;
@@ -179,8 +146,62 @@
     gap: 20px 15px;
   }
   .burger:checked ~ .menu {
+  }
+}
+
+@media (max-width: 500px) {
+  .burger {
+    display: inline-block;
+    position: absolute;
+    top: 37px;
+    right: 20px;
+    content: url("menu-burger.png");
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  .burger:checked {
+    display: none;
+  }
+
+  .cross {
+    position: absolute;
+    top: 37px;
+    right: 20px;
+    content: url("cross.png");
+    display: block;
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+  }
+
+  .menu {
+    border-width: 0px;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
     background-color: gray;
-    width: 300px;
+
+    padding: 0 0 0 0px;
+    width: 0;
+
+    transition-property: width;
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+  }
+  .menu ul {
+    margin-left: 20px;
+  }
+  .menu .logo {
+    margin-left: 37px;
+  }
+  .header__body ul {
+    padding: 0 150px 20px 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 15px;
   }
 }
 
