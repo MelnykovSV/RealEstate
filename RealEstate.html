@@ -26,6 +26,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="overlay overlay-hidden" id="overlay"></div>
       <header class="header">
         <nav class="header__body _container">
           <a href="/" class="logo">SmartSpace</a>
@@ -47,7 +48,6 @@
               </div>
             </label>
           </div>
-          <div class="overlay overlay-hidden" id="overlay"></div>
 
           <ul class="menu menu-hidden" id="menu">
             <li><a href="" class="menu__item">Home</a></li>
@@ -61,7 +61,9 @@
       </header>
       <main class="main">
         <section class="hero _container">
-          <div class="background"></div>
+          <div class="background">
+            <div class="background__blue-part"></div>
+          </div>
 
           <h1 class="hero__title">RESIDENTIAL & OFFICE SPACES</h1>
           <strong class="hero__strong"
@@ -78,6 +80,142 @@
             />
             <button type="submit">Search Now!</button>
           </form>
+          <div class="image-container">
+            <img src="images/hero-image-cut.jpg" alt="" />
+            <div class="arrows-container">
+              <button>
+                <svg class="arrow">
+                  <use href="images/symbol-defs.svg#icon-arrow-left"></use>
+                </svg>
+              </button>
+              <button>
+                <svg class="arrow">
+                  <use href="images/symbol-defs.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a href="/"
+                  ><svg class="socials__icon">
+                    <use href="images/symbol-defs.svg#icon-facebook"></use></svg
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a href="/"
+                  ><svg class="socials__icon">
+                    <use
+                      href="images/symbol-defs.svg#icon-instagram"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a href="/"
+                  ><svg class="socials__icon">
+                    <use href="images/symbol-defs.svg#icon-twitter"></use></svg
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a href="/"
+                  ><svg class="socials__icon">
+                    <use href="images/symbol-defs.svg#icon-linkedin"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="partners">
+            <h2 class="partners__header">Our Amazing Partners</h2>
+            <ul class="partners__list">
+              <li class="partners__item">
+                <a href="/"
+                  ><svg class="partners__icon">
+                    <use href="images/symbol-defs.svg#icon-buzz"></use></svg
+                ></a>
+              </li>
+              <li class="partners__item">
+                <a href="/"
+                  ><svg class="partners__icon">
+                    <use href="images/symbol-defs.svg#icon-chase"></use></svg
+                ></a>
+              </li>
+              <li class="partners__item">
+                <a href="/"
+                  ><svg class="partners__icon">
+                    <use
+                      href="images/symbol-defs.svg#icon-microsoft"
+                    ></use></svg
+                ></a>
+              </li>
+              <li class="partners__item">
+                <a href="/"
+                  ><svg class="partners__icon">
+                    <use href="images/symbol-defs.svg#icon-gucc"></use></svg
+                ></a>
+              </li>
+              <li class="partners__item">
+                <a href="/"
+                  ><svg class="partners__icon">
+                    <use href="images/symbol-defs.svg#icon-airbnb"></use></svg
+                ></a>
+              </li>
+              <li class="partners__item">
+                <a href="/"
+                  ><svg class="partners__icon">
+                    <use href="images/symbol-defs.svg#icon-uber"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="description _container">
+          <h2 class="description__title">How it works?</h2>
+          <ul class="description__body">
+            <li class="description__item card">
+              <a href="">
+                <div class="card__icon-container card__icon-container1">
+                  <svg class="card__icon">
+                    <use href="images/symbol-defs.svg#icon-icon1"></use>
+                  </svg>
+                </div>
+
+                <h3 class="card__header">Research Suburbs</h3>
+                <p class="card__text">
+                  Wonder twenty hunted and put income set desire expect. Am
+                  cottage calling.
+                </p>
+              </a>
+            </li>
+            <li class="description__item card">
+              <a href="">
+                <div class="card__icon-container card__icon-container2">
+                  <svg class="card__icon">
+                    <use href="images/symbol-defs.svg#icon-icon2"></use>
+                  </svg>
+                </div>
+                <h3 class="card__header">Instant Valuation</h3>
+                <p class="card__text">
+                  Conveying or northward offending admitting perfectly my.
+                  Colonel gravit and moonlight.
+                </p>
+              </a>
+            </li>
+            <li class="description__item card">
+              <a href="">
+                <div class="card__icon-container card__icon-container3">
+                  <svg class="card__icon">
+                    <use href="images/symbol-defs.svg#icon-icon3"></use>
+                  </svg>
+                </div>
+                <h3 class="card__header">Track Property</h3>
+                <p class="card__text">
+                  Moderate children at of outweigh it. Unsatiable it considered
+                  invitation he travelling insensible.
+                </p>
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
       <footer class="footer"></footer>

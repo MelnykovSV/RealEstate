@@ -11,6 +11,7 @@ function check() {
   }
   if (atr === "menu menu-shown") {
     menu.setAttribute("class", "menu menu-hidden");
+    menu.setAttribute("disbled", "true");
     overlay.setAttribute("class", "overlay overlay-hidden");
     return;
   }
