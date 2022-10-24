@@ -1,32 +1,19 @@
-const burger = document.getElementById("burger");
-const cross = document.getElementById("cross");
+const checkbox = document.getElementById("header__check");
+const overlay = document.getElementById("overlay");
 const menu = document.getElementById("menu");
-console.log(burger);
-console.log(cross);
-console.log(menu);
 
-function burger_check() {
-  cross.checked = false;
-  console.log(window.innerWidth);
-  if (window.innerWidth < 500) {
-    console.log(" < 500");
-    menu.style.width = "100%";
-
+function check() {
+  const atr = menu.getAttribute("class");
+  if (atr === "menu menu-hidden") {
+    menu.setAttribute("class", "menu menu-shown");
+    overlay.setAttribute("class", "overlay overlay-shown");
     return;
   }
-  if (window.innerWidth < 685) {
-    menu.style.width = "300px";
-    console.log(" < 685");
-    return;
-  } else {
+  if (atr === "menu menu-shown") {
+    menu.setAttribute("class", "menu menu-hidden");
+    overlay.setAttribute("class", "overlay overlay-hidden");
     return;
   }
 }
-function cross_check() {
-  burger.checked = false;
-  menu.style.width = "0px";
-  console.log(menu);
-}
 
-burger.addEventListener("click", burger_check);
-cross.addEventListener("click", cross_check);
+checkbox.addEventListener("change", check);

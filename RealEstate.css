@@ -9,225 +9,185 @@
   padding: 0 10px;
 }
 
-/*
-320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV
-*/
-
 /*-----Header----------------------------------------*/
 
 .header {
 }
 .header__body {
-  padding-bottom: 36px;
   display: flex;
+  height: 100px;
   justify-content: space-between;
-  gap: 30px 20px;
 }
-
-.header__body svg {
-  margin: 36px 30px 0 0;
-  display: none;
-}
-.burger {
-  display: none;
-}
-.cross {
-  display: none;
+._container {
 }
 .logo {
-  overflow: hidden;
-  margin-top: 36px;
-  display: inline-block;
+  display: block;
+  margin-top: 38px;
+  font-family: Manrope;
+  font-style: normal;
   font-weight: 800;
   font-size: 23px;
-  line-height: calc(31 / 23 * 100%);
+  line-height: 31px;
+
   color: #31353b;
 }
 .menu {
-  border-width: 0px;
-  right: 0;
+  margin-top: 20px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+}
+
+.menu a {
+  display: block;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.cross {
+}
+.main {
+}
+.footer {
+}
+
+.header__viewbox {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 38px 38px 0 0;
   overflow: hidden;
-  padding: 0 0 0 0px;
-  width: 300px;
-  height: 300px;
+  z-index: 2;
 }
 
-.menu .logo {
-  display: none;
+.icon {
+  display: block;
+  height: 40px;
+  width: 40px;
 }
 
-.header__body ul {
-  margin-top: 34px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px 15px;
+.header__check {
+  margin: 0;
+  appearance: none;
+}
+.header__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  height: 80px;
+}
+.header__icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 500ms;
+}
+.header__check:checked {
+  background-color: red;
 }
 
-/*
-.header__body ul {
-  margin-top: 34px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 20px 15px;
-}
-*/
-
-.header__body li {
-}
-.header__body ul a {
-  color: inherit;
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: calc(17 / 13 * 100%);
+.header__check:checked + .header__label > .header__icons {
+  transform: translateY(-50%);
 }
 
-/*
-.header__body ul a {
-  color: inherit;
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: calc(17 / 13 * 100%);
-}
-*/
+.menu {
+  position: absolute;
+  padding-top: 70px;
+  padding-left: 15px;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #f85a47;
+  width: 180px;
 
-@media (max-width: 768px) {
-  .header__body ul {
-    gap: 20px 30px;
-  }
-  .header__body ul a {
-    font-size: 18px;
-  }
+  z-index: 1;
+  margin: 0;
+  transition: transform 500ms;
+}
+.menu-hidden {
+  transform: translateY(-100%);
 }
 
-@media (max-width: 685px) {
-  .menu .logo {
-    display: block;
-  }
-  .burger {
-    display: inline-block;
-    position: absolute;
-    top: 37px;
-    right: 20px;
-    content: url("menu-burger.png");
-    display: block;
-    width: 24px;
-    height: 24px;
-    -webkit-appearance: none;
-  }
-  .cross {
-    display: none;
-    position: absolute;
-    top: 37px;
-    right: 20px;
-    content: url("cross.png");
-    display: block;
-    width: 24px;
-    height: 24px;
-    -webkit-appearance: none;
-  }
-
-  .menu {
-    border-width: 0px;
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-    background-color: gray;
-    padding: 0 0 0 0px;
-    width: 0px;
-    transition-property: width;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
-  }
-  .menu ul {
-    margin-left: 20px;
-  }
-  .menu .logo {
-    margin-left: 37px;
-  }
-  .header__body ul {
-    padding: 0 150px 20px 20px;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px 15px;
-  }
+.menu-shown {
+  transform: translateY(0);
 }
 
-@media (max-width: 500px) {
-  .menu .logo {
-    display: block;
-  }
-  .burger {
-    display: inline-block;
-    position: absolute;
-    top: 37px;
-    right: 20px;
-    content: url("menu-burger.png");
-    display: block;
-    width: 24px;
-    height: 24px;
-  }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 12, 12, 0.5);
+  transition: transform 250ms;
+}
 
-  .cross {
-    position: absolute;
-    top: 37px;
-    right: 20px;
-    content: url("cross.png");
-    display: block;
-    width: 24px;
-    height: 24px;
-    -webkit-appearance: none;
-  }
-
-  .menu {
-    border-width: 0px;
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-    background-color: gray;
-
-    padding: 0 0 0 0px;
-    width: 0;
-
-    transition-property: width;
-    transition-duration: 500ms;
-    transition-timing-function: linear;
-  }
-  .menu ul {
-    margin-left: 20px;
-  }
-  .menu .logo {
-    margin-left: 37px;
-  }
-  .header__body ul {
-    padding: 0 150px 20px 20px;
-    width: 100px;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px 15px;
-  }
+.overlay-hidden {
+  transform: translateY(-100%);
+}
+.overlay-shown {
+  transform: translateY(0);
 }
 
 /*-----Main----------------------------------------*/
-.main {
+.hero {
 }
 
-/*-----Footer----------------------------------------*/
-.footer {
+.back {
+  position: absolute;
 }
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:aquamarine;
+  z-index: -1;
+
+}
+.hero__title {
+  margin-bottom: 24px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 29px;
+  color: #ff9900;
+}
+
+.hero__strong {
+  display: block;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: calc(73 / 56 * 100%);
+  color: #000000;
+  margin-bottom: 23px;
+}
+
+.hero__text {
+  margin-bottom: 48px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  color: #31353b;
+}
+
+.hero__form {
+  display: flex;
+}
+
+.hero__form input {
+  display: block;
+  height: 86px;
+}
+
+.

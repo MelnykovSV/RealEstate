@@ -27,24 +27,59 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__body _container">
-          <input type="checkbox" name="" id="burger" class="burger" />
-          <a href="" class="logo">SmartSpace</a>
-          <div class="menu" id="menu">
-            <input type="checkbox" name="" id="cross" class="cross" />
-            <a href="" class="logo">SmartSpace</a>
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Service</a></li>
-              <li><a href="">Portfolio</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
+        <nav class="header__body _container">
+          <a href="/" class="logo">SmartSpace</a>
+          <div class="header__viewbox">
+            <input
+              type="checkbox"
+              name=""
+              id="header__check"
+              class="header__check"
+            />
+            <label for="header__check" class="header__label">
+              <div class="header__icons">
+                <svg class="icon">
+                  <use href="images/symbol-defs.svg#icon-menu3"></use>
+                </svg>
+                <svg class="icon">
+                  <use href="images/symbol-defs.svg#icon-cross"></use>
+                </svg>
+              </div>
+            </label>
           </div>
-        </div>
+          <div class="overlay overlay-hidden" id="overlay"></div>
+
+          <ul class="menu menu-hidden" id="menu">
+            <li><a href="" class="menu__item">Home</a></li>
+            <li><a href="" class="menu__item">About</a></li>
+            <li><a href="" class="menu__item">Service</a></li>
+            <li><a href="" class="menu__item">Portfolio</a></li>
+            <li><a href="" class="menu__item">Blog</a></li>
+            <li><a href="" class="menu__item">Contact</a></li>
+          </ul>
+        </nav>
       </header>
-      <main class="main"></main>
+      <main class="main">
+        <section class="hero _container">
+          <div class="background"></div>
+
+          <h1 class="hero__title">RESIDENTIAL & OFFICE SPACES</h1>
+          <strong class="hero__strong"
+            >Smart Living Style for Smart People</strong
+          >
+          <p class="hero__text">
+            Much did had call new drew that kept. Limits expect wonder law she.
+            Now has you views woman noisy match money rooms.
+          </p>
+          <form action="" class="hero__form">
+            <input
+              type="text"
+              placeholder="Enter Zipcode to search properties"
+            />
+            <button type="submit">Search Now!</button>
+          </form>
+        </section>
+      </main>
       <footer class="footer"></footer>
       <script src="RealEstate.js"></script>
     </div>
