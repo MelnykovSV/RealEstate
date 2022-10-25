@@ -407,4 +407,222 @@
   font-weight: 600;
   font-size: 40px;
   line-height: 55px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.best-deals__text {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.best-deals__button {
+  display: block;
+  margin: auto;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+  padding: 22px 33px 20px 34px;
+  background-color: #f85a47;
+  border: none;
+  box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07),
+    0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481),
+    0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185),
+    0px 20px 13px rgba(248, 90, 71, 0.035),
+    0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
+    0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.properties {
+}
+.property {
+  margin-bottom: 10px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 26px;
+  color: #000000;
+}
+.property__radio {
+  appearance: none;
+}
+.best-deals__list {
+}
+.best-deals__item {
+  width: 100%;
+  position: relative;
+}
+.best-deals__image {
+  width: 100%;
+}
+.characteristics {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: left;
+  gap: 6px;
+}
+.featured {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+._3d {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+/*-----proposition----------------------------------------*/
+.proposition {
+  padding-bottom: 40px;
+}
+.proposition__title {
+  margin-top: 20px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 55px;
+  text-align: center;
+  color: #000000;
+}
+
+.proposition__body {
+  background: #f1ffff;
+}
+.proposition__image-container {
+  position: relative;
+  width: 100%;
+}
+.proposition__image1 {
+  width: 100%;
+}
+.proposition__image2 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 83%;
+  filter: drop-shadow(0px 163px 80px rgba(0, 0, 0, 0.04))
+    drop-shadow(0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704))
+    drop-shadow(0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963))
+    drop-shadow(0px 32.6px 13px rgba(0, 0, 0, 0.02))
+    drop-shadow(0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037))
+    drop-shadow(0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963))
+    drop-shadow(48px 58px 44px rgba(0, 0, 0, 0.09));
+}
+.proposition__content > h3 {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 42px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.proposition__content > p {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #545a58;
+  margin: 0 auto 15px auto;
+  text-align: center;
+}
+.parameters {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 30px 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.parameters > li {
+  display: block;
+  width: 93px;
+}
+.parameters h4 {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 23px;
+  color: black;
+  margin-bottom: 12px;
+}
+.parameters p {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+
+  color: #545a58;
+}
+.proposition__button {
+  padding: 10px 10px;
+  display: block;
+  margin: auto;
+  border: none;
+  max-width: 300px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  background: #f85a47;
+  box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07),
+    0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481),
+    0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185),
+    0px 20px 13px rgba(248, 90, 71, 0.035),
+    0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
+    0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+  border-radius: 5px;
+}
+
+/*-----reviews----------------------------------------*/
+.reviews {
+  height: 500px;
+}
+.reviews__title {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 55px;
+  text-align: center;
+}
+.reviews__list {
 }
