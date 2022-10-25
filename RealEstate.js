@@ -6,6 +6,7 @@ function check() {
   const atr = menu.getAttribute("class");
   if (atr === "menu menu-hidden") {
     menu.setAttribute("class", "menu menu-shown");
+    menu.removeAttribute("disabled");
     overlay.setAttribute("class", "overlay overlay-shown");
     return;
   }
