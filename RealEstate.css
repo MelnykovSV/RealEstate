@@ -38,14 +38,6 @@
 
   color: #31353b;
 }
-.menu {
-  margin-top: 20px;
-  font-family: DM Sans;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 17px;
-}
 
 .menu a {
   display: block;
@@ -128,6 +120,12 @@
   z-index: 5;
   margin: 0;
   transition: transform 500ms;
+  margin-top: 20px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
 }
 .menu-hidden {
   transform: translateY(-100%);
@@ -153,6 +151,30 @@
 }
 .overlay-shown {
   transform: translateY(0);
+}
+
+@media screen and (min-width: 600px) {
+  .header__viewbox {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    transform: translateY(0);
+    padding: 0;
+    margin: 0;
+    width: min(500px, 52%);
+    gap: 10px;
+    background-color: inherit;
+    margin-top: 34px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    color: #000000;
+  }
 }
 
 /*-----Main----------------------------------------*/
@@ -230,7 +252,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 27px;
+  line-height: calc(27 / 20 * 100%);
   color: rgb(49, 53, 59, 0.3);
   opacity: 0.5;
   padding-left: 10px;
@@ -252,8 +274,9 @@
 
 .image-container {
   position: relative;
-  margin-top: 15px;
-  width: 100%;
+  margin: 15px auto 0 auto;
+  width: min(603px, 100%);
+
   filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.03))
     drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778))
     drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222))
@@ -326,8 +349,127 @@
 }
 
 .partners__icon {
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media screen and (min-width: 600px) {
+  .hero__strong {
+    display: block;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: calc(73 / 56 * 100%);
+    color: #000000;
+    margin-bottom: 23px;
+    width: min(484px, 100%);
+  }
+  .hero__text {
+    width: min(499px, 100%);
+  }
+  .hero__form {
+    width: min(100%, 756px);
+  }
+
+  .hero__form input {
+    padding: 0;
+    display: block;
+    height: 86px;
+    width: 75.13%;
+    min-width: 245px;
+
+    font-size: 20px;
+    line-height: calc(27 / 20 * 100%);
+    color: rgb(49, 53, 59, 0.3);
+    opacity: 0.5;
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+  .hero__form button {
+    min-height: 86px;
+    padding: 0;
+    width: 24.87%;
+    font-size: 17px;
+    line-height: calc(23 / 17 * 100%);
+  }
+}
+@media screen and (min-width: 1190px) {
+  .hero__container {
+    position: relative;
+  }
+  .image-container {
+    position: absolute;
+    right: 10px;
+    top: 184px;
+    z-index: -1;
+  }
+  .hero__title {
+    padding-top: 224px;
+  }
+  .hero__form {
+    margin-bottom: 145px;
+  }
+
+  .socials {
+    margin-top: 15px;
+  }
+  .socials__list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: space-between;
+    width: 170px;
+    height: 21px;
+    align-items: center;
+  }
+  .socials__item {
+    height: fit-content;
+    width: fit-content;
+  }
+  .socials__icon {
+    width: 21px;
+    height: 21px;
+  }
+  .partners {
+    margin: 20px 0 0 0;
+  }
+  .partners__header {
+    max-width: 174px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: #31353b;
+    margin: 0 0 20px 0;
+  }
+  .partners__list {
+    width: 768.6px;
+  }
+  .partners li {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    flex: 0 0 fit-content;
+  }
+
+  .partners__list {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .partners__icon {
+  }
+  .hero__hyperlinks {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }
 
 /*-----Description----------------------------------------*/
@@ -335,6 +477,7 @@
   margin-top: 70px;
 }
 .description__title {
+  text-align: center;
   max-width: 262px;
   margin: 0 auto;
   font-family: "Manrope";
@@ -481,11 +624,18 @@
 .best-deals__list {
 }
 .best-deals__item {
-  width: 100%;
+  width: min(370px, 100%);
   position: relative;
+  margin: 0 auto;
+}
+.best-deals__item a {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
 .best-deals__image {
   width: 100%;
+  margin: 0 auto;
 }
 .characteristics {
   position: absolute;
@@ -542,7 +692,8 @@
 }
 .proposition__image-container {
   position: relative;
-  width: 100%;
+  width: min(492px, 100%);
+  margin: 0 auto;
 }
 .proposition__image1 {
   width: 100%;
