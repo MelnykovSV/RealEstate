@@ -8,6 +8,11 @@
   margin: 0 auto;
   padding: 0 10px;
 }
+.sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
 
 /*-----Header----------------------------------------*/
 
@@ -48,21 +53,19 @@
   color: inherit;
   margin-bottom: 20px;
 }
-.menu li::after {
-  width: 100%;
+.menu a::after {
+  margin-top: 10px;
+  content: " ";
+  display: block;
   height: 4px;
   background-color: black;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 500ms;
 }
-.menu li:hover::after {
-  width: 100%;
-  height: 4px;
-  background-color: black;
-}
-.menu a:active {
-  color: red;
-}
-.menu a:focus {
-  color: blue;
+.menu a:hover::after {
+  transform: scaleX(1);
 }
 
 .cross {
@@ -214,6 +217,7 @@
 .hero__form {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .hero__form input {
@@ -221,6 +225,7 @@
   display: block;
   height: 60px;
   width: 65.5%;
+  min-width: 245px;
   font-family: Manrope;
   font-style: normal;
   font-weight: 400;
@@ -231,6 +236,7 @@
   padding-left: 10px;
 }
 .hero__form button {
+  min-height: 60px;
   padding: 0;
   width: 34.5%;
   background-color: #f85a47;
@@ -305,19 +311,17 @@
 }
 .partners li {
   display: block;
-
-  min-width: 71px;
-  max-width: 97.42px;
-  min-height: 16px;
-  max-height: 23px;
   width: 80px;
+  min-width: 80px;
   height: 20px;
+  flex: 1 0 25%;
 }
 
 .partners__list {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 30px 20px;
+  gap: 30px 50px;
   justify-content: space-around;
 }
 
@@ -585,9 +589,13 @@
   margin-left: 20px;
 }
 .parameters > li {
+  text-align: center;
   display: block;
   width: 93px;
+  flex: 1 0 25%;
+  line-height: 23px;
 }
+
 .parameters h4 {
   font-family: Manrope;
   font-style: normal;
@@ -743,6 +751,8 @@
   text-align: center;
 }
 .subscription__form label {
+  display: block;
+  margin: auto;
   font-family: Manrope;
   font-style: normal;
   font-weight: 500;
@@ -752,6 +762,8 @@
   color: rgb(49, 53, 59, 0.2);
 }
 .subscription__form input {
+  display: block;
+  margin: auto;
   border: none;
   font-family: Manrope;
   font-style: normal;
@@ -763,6 +775,8 @@
 }
 
 .subscription__form button {
+  display: block;
+  margin: auto;
   padding: 23px 39px 23px 40px;
   font-family: DM Sans;
   font-style: normal;
@@ -791,6 +805,8 @@
   margin-bottom: 10px;
 }
 .menu-footer a {
+  display: block;
+  width: fit-content;
   font-family: DM Sans;
   font-style: normal;
   font-weight: 700;
@@ -798,6 +814,21 @@
   line-height: 17px;
 
   color: #31353b;
+}
+
+.menu-footer a::after {
+  margin-top: 10px;
+  content: " ";
+  display: block;
+  height: 4px;
+  background-color: #31353b;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 500ms;
+}
+.menu-footer a:hover::after {
+  transform: scaleX(1);
 }
 
 .logo {
