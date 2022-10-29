@@ -376,14 +376,14 @@
     width: min(499px, 100%);
   }
   .hero__form {
-    width: min(92.8%, 750px);
+    width: min(100%);
   }
 
   .hero__form input {
     padding: 0;
     display: block;
     height: 86px;
-    width: 70.2%;
+    width: 65.2%;
     min-width: 245px;
 
     font-size: 20px;
