@@ -1189,7 +1189,6 @@
 
 /*-----proposition----------------------------------------*/
 .proposition {
-  padding-bottom: 40px;
 }
 .proposition__title {
   margin-top: 20px;
@@ -1205,6 +1204,7 @@
 .proposition__body {
   background: #f1ffff;
   padding-top: 15px;
+  padding-bottom: 40px;
 }
 .proposition__image-container {
   position: relative;
@@ -1316,6 +1316,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 33px;
+    padding-bottom: 10px;
   }
   .proposition__image-container {
     width: 45%;
@@ -1333,7 +1334,7 @@
     margin-bottom: 28px;
     text-align: left;
     width: 378px;
-    margin-top: 30px;
+    margin-top: 0;
   }
   .proposition__content > p {
     font-family: Manrope;
@@ -1395,6 +1396,7 @@
     padding-right: 77px;
     width: 1170px;
     margin: auto;
+    padding-bottom: 0;
   }
   .proposition__image-container {
     width: 492px;
@@ -1404,6 +1406,9 @@
   .proposition__content {
     width: 435px;
     margin: 0;
+    min-height: 490px;
+    height: fit-content;
+    margin-bottom: 88px;
   }
 
   .proposition__content > h3 {
@@ -1565,16 +1570,143 @@
   text-decoration: underline;
   color: #2cbde7;
 }
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .reviews__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .reviews__item {
+    width: min(32%, 230px);
+    position: relative;
+    padding-bottom: 100px;
+  }
+  .review__text {
+    font-size: 14px;
+  }
+  .review__author {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+  }
+  .partners__list--reviews {
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+  }
+  .pricing {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1190px) {
+  .reviews {
+    margin-top: 100px;
+  }
+  .reviews__title {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .reviews__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .reviews__item {
+    width: 30%;
+    position: relative;
+    padding-bottom: 100px;
+  }
+  .review__text {
+    font-size: 16px;
+  }
+  .review__author {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+  }
+  .reviews__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+  }
+  .partners__list--reviews {
+    justify-content: space-around;
+    margin: 0;
+    gap: 25px;
+    flex: 0 1 500px;
+    width: auto;
+  }
+  .pricing {
+    text-align: left;
+    width: 311px;
+    margin: 0;
+  }
+  .partners {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1191px) {
+  .reviews {
+    margin-top: 196px;
+  }
+  .reviews__title {
+    text-align: left;
+    margin-bottom: 51px;
+    width: 570px;
+  }
+  .reviews__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 84px;
+  }
+  .reviews__item {
+    padding: 52px 38px;
+    width: 380px;
+  }
+  .review__text {
+    font-size: 16px;
+    margin-top: 33.64px;
+    margin-bottom: 53px;
+    width: 270px;
+  }
+  .review__author {
+  }
+  .reviews__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 45px;
+    margin-right: 44px;
+  }
+  .partners__list--reviews {
+    justify-content: space-between;
+    margin: 0;
+    width: 672px;
+  }
+  .pricing {
+    text-align: left;
+    width: 311px;
+    margin: 0;
+  }
+  .partners {
+    margin: 0;
+  }
+}
 
 /*-----subscription----------------------------------------*/
 .subscription {
-  box-shadow: 0px 163px 80px rgba(0, 0, 0, 0.04),
-    0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704),
-    0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963),
-    0px 32.6px 13px rgba(0, 0, 0, 0.02),
-    0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037),
-    0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963);
-  margin-bottom: 70px;
+  padding-bottom: 70px;
+  position: relative;
+}
+.subscription::after {
+  display: block;
+  content: " ";
+  width: min(889px, 100%);
+  height: 1px;
+  background-color: #dedfe1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .subscription__title {
   text-align: center;
@@ -1600,6 +1732,12 @@
 }
 .subscription__form {
   text-align: center;
+  box-shadow: 0px 163px 80px rgba(0, 0, 0, 0.04),
+    0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704),
+    0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963),
+    0px 32.6px 13px rgba(0, 0, 0, 0.02),
+    0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037),
+    0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963);
 }
 .subscription__form label {
   display: block;
@@ -1645,6 +1783,184 @@
     0px 20px 13px rgba(248, 90, 71, 0.035),
     0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
     0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+}
+@media screen and (min-width: 600px) {
+  .subscription {
+    padding-bottom: 100px;
+    margin-top: 100px;
+  }
+  .subscription__title {
+    text-align: center;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #31353b;
+    margin-bottom: 11px;
+  }
+  .subscription__subtitle {
+    text-align: center;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #31353b;
+    margin-bottom: 34px;
+  }
+  .subscription__form {
+    text-align: left;
+    box-shadow: 0px 163px 80px rgba(0, 0, 0, 0.04),
+      0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704),
+      0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963),
+      0px 32.6px 13px rgba(0, 0, 0, 0.02),
+      0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037),
+      0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963);
+    display: flex;
+    padding: 26px 30px 26px 45px;
+    justify-content: space-between;
+    width: min(686px, 100%);
+    margin: auto;
+  }
+
+  .subscription__form label {
+    display: block;
+    margin: auto;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: rgb(49, 53, 59, 0.2);
+    margin-bottom: 11px;
+  }
+  .subscription__form input {
+    display: block;
+    margin: auto;
+    border: none;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #31353b;
+  }
+
+  .subscription__form button {
+    display: block;
+    margin: 0;
+    padding: 23px 39px 23px 40px;
+    font-family: DM Sans;
+    font-style: normal;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    width: 167px;
+    background: #f85a47;
+    box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07),
+      0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481),
+      0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185),
+      0px 20px 13px rgba(248, 90, 71, 0.035),
+      0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
+      0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription {
+    padding-bottom: 160px;
+    margin-top: 372px;
+  }
+  .subscription__title {
+    text-align: center;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #31353b;
+    margin-bottom: 11px;
+  }
+  .subscription__subtitle {
+    text-align: center;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #31353b;
+    margin-bottom: 34px;
+  }
+  .subscription__form {
+    text-align: left;
+    box-shadow: 0px 163px 80px rgba(0, 0, 0, 0.04),
+      0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704),
+      0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963),
+      0px 32.6px 13px rgba(0, 0, 0, 0.02),
+      0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037),
+      0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963);
+    display: flex;
+    padding: 26px 30px 26px 45px;
+    justify-content: space-between;
+    width: min(686px, 100%);
+    margin: auto;
+  }
+
+  .subscription__form label {
+    display: block;
+    margin: auto;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: rgb(49, 53, 59, 0.2);
+    margin-bottom: 11px;
+  }
+  .subscription__form input {
+    display: block;
+    margin: auto;
+    border: none;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #31353b;
+  }
+
+  .subscription__form button {
+    display: block;
+    margin: 0;
+    padding: 23px 39px 23px 40px;
+    font-family: DM Sans;
+    font-style: normal;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144.2%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    width: 167px;
+    background: #f85a47;
+    box-shadow: 0px 100px 80px rgba(248, 90, 71, 0.07),
+      0px 64.8148px 46.8519px rgba(248, 90, 71, 0.0531481),
+      0px 38.5185px 25.4815px rgba(248, 90, 71, 0.0425185),
+      0px 20px 13px rgba(248, 90, 71, 0.035),
+      0px 8.14815px 6.51852px rgba(248, 90, 71, 0.0274815),
+      0px 1.85185px 3.14815px rgba(248, 90, 71, 0.0168519);
+  }
 }
 
 /*-----footer----------------------------------------*/
@@ -1703,4 +2019,40 @@
 
   color: #31353b;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 900px) {
+  .footer {
+    margin-top: 60px;
+  }
+  .footer__body {
+    margin: auto;
+    width: 889px;
+    display: flex;
+    height: 31px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-footer {
+    display: flex;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    width: 487px;
+    color: #31353b;
+    justify-content: space-between;
+    height: 17px;
+    margin: 0;
+  }
+  .footer__body ul {
+    margin-bottom: 0px;
+  }
+  .footer__body .logo {
+    margin: 0;
+  }
+  .copy {
+    text-align: center;
+    margin-top: 69px;
+  }
 }
